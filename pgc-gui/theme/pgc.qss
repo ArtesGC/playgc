@@ -1,5 +1,5 @@
-QWidget{
-  font-family: "consolas";
+QWidget, QSplashScreen{
+  font-family: "Coming Soon";
   font-size: 10pt;
 }
 QMenuBar{
