@@ -11,32 +11,27 @@ from mainwindow import PGC
 
 class PGCINIT:
     def __init__(self):
-        # application font
-        QFontDatabase.addApplicationFont("./font/lemon.ttf")
-
-        img = QPixmap("./favicon/init.png")
+        img = QPixmap("./favicon/bg.jpg").scaled(int(1920/2), int(1080/2))
         self.align = int(Qt.AlignmentFlag.AlignBottom | Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignAbsolute)
-        self.color = Qt.GlobalColor.white
         self.janela = QSplashScreen(img)
-        self.janela.setStyleSheet(
-            'font-family: "Lemon";'
-            'font-size: 11pt;'
-        )
         self.janela.show()
         self.iniciar()
 
     def iniciar(self):
         load = 0
         while load < 100:
-            self.janela.showMessage(f"Loading Package: {load}%", self.align, self.color)
-            sleep(0.3)
-            load += randint(5, 10)
+            self.janela.showMessage(f"<h1>PlayGC</h1><hr>"
+                                    f"<h2><i>Video to Audio Converter</i></h2>"
+                                    f"<p>Loading Packages: {load}%</p>", self.align)
+            sleep(0.5)
+            load += randint(1, 10)
         self.janela.close()
         app = PGC()
         app.ferramentas.show()
 
 
 if __name__ == '__main__':
+    theme = open('theme/pgc.qss').read().strip()
     gcApp = QApplication(argv)
     pgcApp = PGCINIT()
     gcApp.exec()
