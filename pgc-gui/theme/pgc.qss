@@ -1,4 +1,53 @@
 QWidget{
-  font-family: "Lemon";
+  font-family: "consolas";
   font-size: 10pt;
+}
+QMenuBar{
+  background-color: white;
+  color: gray;
+}
+QMenuBar::item:selected{
+  background-color: white;
+  color: blue;
+}
+QMenu{
+  background-color: white;
+  color: gray;
+}
+QMenu::item:selected{
+  background-color: white;
+  color: blue;
+}
+QLabel{
+  color: 'black';
+}
+QLineEdit{
+  color: gray;
+  border-width: 1px;
+  border-color: 'blue';
+  border-style: solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+QTextEdit{
+  font-size: 9pt;
+  color: 'gray';
+  background-color: 'black';
+  border-width: 1px;
+  border-color: 'blue';
+  border-style: solid;
+  border-radius: 5px;
+  padding: 3px;
+}
+QPushButton{
+  color: 'white';
+  border-width: 1px;
+  border-color: 'blue';
+  border-style: solid;
+  border-radius: 5px;
+  background-color: #56604b;
+  padding: 5px;
+}
+QPushButton:hover{
+  background-color: none;
 }
