@@ -11,6 +11,8 @@ from mainwindow import PGC
 
 class PGCINIT:
     def __init__(self):
+        QFontDatabase.addApplicationFont("./font/comingsoon.ttf")
+
         img = QPixmap("./favicon/bg.jpg").scaled(int(1920/2), int(1080/2))
         self.align = int(Qt.AlignmentFlag.AlignBottom | Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignAbsolute)
         self.janela = QSplashScreen(img)
