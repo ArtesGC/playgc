@@ -13,6 +13,8 @@ class PGC:
     def __init__(self):
         self.locatevideo = None
 
+        QFontDatabase.addApplicationFont("./font/comingsoon.ttf")
+
         self.ferramentas = QWidget()
         self.ferramentas.setFixedSize(int(1920/3), int(1080/3))
         self.ferramentas.setWindowTitle("PlayGC")
