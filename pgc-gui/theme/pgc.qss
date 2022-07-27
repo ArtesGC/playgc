@@ -22,7 +22,7 @@ QLabel{
   color: 'black';
 }
 QLineEdit{
-  color: gray;
+  color: blue;
   border-width: 1px;
   border-color: 'blue';
   border-style: solid;
@@ -50,4 +50,5 @@ QPushButton{
 }
 QPushButton:hover{
   background-color: none;
+  color: gray;
 }
