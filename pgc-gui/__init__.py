@@ -25,7 +25,7 @@ class PGCINIT:
             self.janela.showMessage(f"<h1>PlayGC</h1><hr>"
                                     f"<h2><i>Video to Audio Converter</i></h2>"
                                     f"<p>Loading Packages: {load}%</p>", self.align)
-            sleep(0.5)
+            sleep(0.2)
             load += randint(1, 10)
         self.janela.close()
         app = PGC()
