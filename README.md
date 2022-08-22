@@ -8,11 +8,11 @@
 
 ## Demos
 
-![](assets/01.png) \
-![](assets/02.png) \
-![](assets/03.png) \
-![](assets/04.png) \
-![](assets/05.png)
+![demonstration1](assets/01.png) \
+![demonstration2](assets/02.png) \
+![demonstration3](assets/03.png) \
+![demonstration4](assets/04.png) \
+![demonstration5](assets/05.png)
 
 ---
 
