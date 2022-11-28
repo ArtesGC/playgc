@@ -41,7 +41,7 @@ class PGC:
         self.ferramentas = QMainWindow()
         self.ferramentas.setFixedSize(int(1920/2), int(1080/2))
         self.ferramentas.setWindowTitle("PlayGC")
-        self.ferramentas.setWindowIcon(QIcon("./favicon/pgc_icon-256x256.ico"))
+        self.ferramentas.setWindowIcon(QIcon("favicon/favicon-256x256.ico"))
         self.ferramentas.setStyleSheet(theme)
 
         # ******* background-image *******
