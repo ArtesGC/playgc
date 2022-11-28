@@ -1,3 +1,11 @@
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
 ### VisualStudioCode template
 .vscode/*
 !.vscode/settings.json
