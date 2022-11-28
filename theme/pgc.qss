@@ -1,22 +1,18 @@
-QWidget, QSplashScreen{
+QWidget{
   font-family: "Coming Soon";
   font-size: 10pt;
 }
 QMenuBar{
-  background-color: white;
-  color: gray;
+  color: 'gray';
 }
-QMenuBar::item:selected{
-  background-color: white;
-  color: blue;
+QMenuBar::selected{
+  color: 'blue';
 }
 QMenu{
-  background-color: white;
-  color: gray;
+  color: 'gray';
 }
-QMenu::item:selected{
-  background-color: white;
-  color: blue;
+QMenu::selected{
+  color: 'blue';
 }
 QLabel{
   color: 'black';
@@ -50,5 +46,5 @@ QPushButton{
 }
 QPushButton:hover{
   background-color: none;
-  color: gray;
+  color: "white";
 }
