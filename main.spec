@@ -41,5 +41,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon="./favicon/pgc_icon-256x256.ico"
+    icon="./favicon/favicon-256x256.ico"
 )
