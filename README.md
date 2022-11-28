@@ -1,6 +1,6 @@
 <div align="center">
 
-# PlayGC
+# <img height="192" src="favicon/favicon-512x512.png" width="192"/>
 
 </div>
 
@@ -8,17 +8,17 @@
 
 ## Demos
 
-![demonstration1](assets/01.png) \
-![demonstration2](assets/02.png) \
-![demonstration3](assets/03.png) \
-![demonstration4](assets/04.png) \
-![demonstration5](assets/05.png)
+![demonstration 1](./assets/02.png) \
+![demonstration 2](./assets/03.png) \
+![demonstration 3](./assets/04.png) \
+![demonstration 5](./assets/05.png)
 
 ---
 
 <div align="center">
 
-&copy; 2022 Nurul-GC \
+&copy; 2022 Nurul-GC |
+[3-Clause BSD LICENSE](./LICENSE) |
 &trade;ArtesGC Inc.
 
 </div>
