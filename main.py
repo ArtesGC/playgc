@@ -14,16 +14,14 @@ def initwindow():
     def iniciar():
         load = 0
         while load < 100:
-            janela.showMessage(f"<h1><i>Video to Audio Converter</i></h1>"
+            janela.setFont(QFont("Coming Soon"))
+            janela.showMessage(f"<h2><i>Video to Audio Converter</i></h2>"
                                f"<p>Loading Packages: {load}%</p>", align)
-            sleep(0.2)
+            sleep(0.5)
             load += randint(1, 10)
         janela.close()
-        app = PGC()
-        app.ferramentas.show()
-
-    # ******* program-font *******
-    QFontDatabase.addApplicationFont("./font/comingsoon.ttf")
+        appgc = PGC()
+        appgc.ferramentas.show()
 
     img = QPixmap("./favicon/favicon-512x512.png")
     align = int(Qt.AlignmentFlag.AlignBottom | Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignAbsolute)
@@ -34,6 +32,11 @@ def initwindow():
 
 class PGC:
     def __init__(self):
+        self.gcApp = QApplication(argv)
+
+        # ******* program-font *******
+        QFontDatabase.addApplicationFont("./font/comingsoon.ttf")
+
         # ******* global-variables *******
         self.locatevideo = None
 
@@ -54,6 +57,7 @@ class PGC:
         menu = QMenuBar()
         detalhes = menu.addMenu("Help")
         instr = detalhes.addAction("Instruction")
+        instr.triggered.connect(self._instr)
         _sair = lambda: exit(0)
         sair = detalhes.addAction("Exit")
         sair.triggered.connect(_sair)
@@ -142,19 +146,28 @@ class PGC:
         QMessageBox.information(
             self.ferramentas,
             "About",
-            "<h2>Information about the Program</h2><hr>"
-            "<p><ul><li><b>Name</b>: PlayGC</li>"
-            "<li><b>Version</b>: 0.1-072022</li>"
-            "<li><b>Programmer & Design</b>: Nurul-GC</li>"
-            "<li><b>Company</b>: ArtesGC Inc</li></ul></p>"
+            "<b>Information about the Program</b><hr>"
+            "<p><ul><li><b>Name:</b> PlayGC</li>"
+            "<li><b>Version:</b> 0.2-112022</li>"
+            "<li><b>Maintener:</b> &copy;Nurul-GC</li>"
+            "<li><b>Publisher:</b> &trade;ArtesGC, Inc.</li></ul></p>"
         )
 
     def _instr(self):
-        QMessageBox.information(self.ferramentas, )
+        QMessageBox.information(
+            self.ferramentas,
+            "Instructions",
+            "<b>Brief Presentation</b><hr>"
+            "<p>PlayGC is a simple tool that allows the users to convert"
+            "their video (mp4) files into audio (mp3) files easily.</p>"
+            "<p>It's very simple to be used, you just got to locate the video "
+            "on your PC and then hit the convert button.</p>"
+            "<p>Thanks for your support!<br>"
+            "<b>&trade;ArtesGC, Inc.</b></p>")
 
 
 if __name__ == '__main__':
     theme = open('theme/pgc.qss').read().strip()
-    gcApp = QApplication(argv)
+    app = PGC()
     initwindow()
-    gcApp.exec()
+    app.gcApp.exec()
