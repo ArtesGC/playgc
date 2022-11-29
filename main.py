@@ -14,9 +14,8 @@ def initwindow():
     def iniciar():
         load = 0
         while load < 100:
-            janela.setFont(QFont("Coming Soon"))
-            janela.showMessage(f"<h2><i>Video to Audio Converter</i></h2>"
-                               f"<p>Loading Packages: {load}%</p>", align)
+            janela.showMessage(f"<b>Video to Audio Converter</b><br>"
+                               f"Loading Packages: {load}%", align)
             sleep(0.5)
             load += randint(1, 10)
         janela.close()
@@ -58,7 +57,7 @@ class PGC:
         detalhes = menu.addMenu("Help")
         instr = detalhes.addAction("Instruction")
         instr.triggered.connect(self._instr)
-        _sair = lambda: exit(0)
+        _sair = lambda: self.gcApp.exit(0)
         sair = detalhes.addAction("Exit")
         sair.triggered.connect(_sair)
         sobre = menu.addAction("About")
